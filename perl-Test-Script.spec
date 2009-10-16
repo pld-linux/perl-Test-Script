@@ -8,18 +8,19 @@
 Summary:	Test::Script - Cross-platform basic tests for scripts
 Summary(pl.UTF-8):	Test::Script - wieloplatformowe podstawowe testy dla skryptów
 Name:		perl-Test-Script
-Version:	1.02
+Version:	1.06
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	affeb47b8c7b9f1eb6ff346daa85784d
+# Source0-md5:	43e8f1429472da66a853be819b11a5b9
 URL:		http://search.cpan.org/dist/Test-Script/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-IPC-Run3
+BuildRequires:	perl-Probe-Perl
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
