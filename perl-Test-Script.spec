@@ -8,19 +8,21 @@
 Summary:	Test::Script - Cross-platform basic tests for scripts
 Summary(pl.UTF-8):	Test::Script - wieloplatformowe podstawowe testy dla skryptów
 Name:		perl-Test-Script
-Version:	1.06
+Version:	1.07
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	43e8f1429472da66a853be819b11a5b9
+Source0:	http://www.cpan.org/modules/by-module/Test/ADAMK/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	f6b5baa6403cd24dac7f023e0ea22384
 URL:		http://search.cpan.org/dist/Test-Script/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-IPC-Run3
-BuildRequires:	perl-Probe-Perl
+BuildRequires:	perl-IPC-Run3 >= 0.034
+BuildRequires:	perl-Probe-Perl >= 0.01
+BuildRequires:	perl-Test-Builder-Tester >= 1.02
+BuildRequires:	perl-Test-Simple >= 0.62
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -71,5 +73,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/Test/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/Test/Script.pm
+%{_mandir}/man3/Test::Script.3pm*
