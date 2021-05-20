@@ -7,21 +7,25 @@
 Summary:	Test::Script - Cross-platform basic tests for scripts
 Summary(pl.UTF-8):	Test::Script - wieloplatformowe podstawowe testy dla skryptów
 Name:		perl-Test-Script
-Version:	1.07
+Version:	1.29
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/ADAMK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f6b5baa6403cd24dac7f023e0ea22384
-URL:		http://search.cpan.org/dist/Test-Script/
-BuildRequires:	perl-devel >= 1:5.8.0
+Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	cadfb1d1fdc421e338521e373d7a9eb7
+URL:		https://metacpan.org/release/Test-Script
+BuildRequires:	perl-ExtUtils-MakeMaker
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
-BuildRequires:	perl-IPC-Run3 >= 0.034
+BuildRequires:	perl(File::Spec) >= 0.80
+BuildRequires:	perl-Capture-Tiny
 BuildRequires:	perl-Probe-Perl >= 0.01
-BuildRequires:	perl-Test-Builder-Tester >= 1.02
-BuildRequires:	perl-Test-Simple >= 0.62
+BuildRequires:	perl-Test-Simple >= 1.302015
+BuildRequires:	perl-Test2-Suite >= 0.000060
+BuildRequires:	perl-Text-ParseWords
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
