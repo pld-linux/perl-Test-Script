@@ -7,13 +7,13 @@
 Summary:	Test::Script - Cross-platform basic tests for scripts
 Summary(pl.UTF-8):	Test::Script - wieloplatformowe podstawowe testy dla skryptów
 Name:		perl-Test-Script
-Version:	1.29
+Version:	1.31
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cadfb1d1fdc421e338521e373d7a9eb7
+Source0:	https://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	4b87f5a0fbe942f38a19c970f2234a1b
 URL:		https://metacpan.org/release/Test-Script
 BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.1
@@ -24,7 +24,7 @@ BuildRequires:	perl(File::Spec) >= 0.80
 BuildRequires:	perl-Capture-Tiny
 BuildRequires:	perl-Probe-Perl >= 0.01
 BuildRequires:	perl-Test-Simple >= 1.302015
-BuildRequires:	perl-Test2-Suite >= 0.000060
+BuildRequires:	perl-Test2-Suite >= 0.000121
 BuildRequires:	perl-Text-ParseWords
 %endif
 BuildArch:	noarch
